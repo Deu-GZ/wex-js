@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	var wex = function (){
+		return new wex.fn.init();
+	}
+
+	wex.fn = wex.prototype;
+
+	wex.fn = {
+		constructor: wex,
+		init: function (){
+			return this; 
+		}
+	}
+	console.log(wex);
+	console.log(wex.fn)
+	console.log(wex.fn.init);
+	console.log(wex.fn.init.prototype);
+
+	wex.fn.init.prototype = wex.fn;
+
+	console.log(wex);
+	console.log(wex.fn)
+	console.log(wex.init);
+	console.log(wex.fn.init.prototype);
+
+
+
+</script>
+</body>
+</html>
